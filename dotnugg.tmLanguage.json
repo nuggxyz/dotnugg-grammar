@@ -555,7 +555,7 @@
             ]
         },
         "general.color": {
-            "match": "\\s*(\\w)\\s*:=\\s*(\\s*({)\\s*zindex\\s*:\\s*((\\+|-)(\\d|D))\\s*,\\s*rgba\\s*:\\s*(rgba?(\\(\\s*\\d+\\s*,\\s*\\d+\\s*,\\s*\\d+,\\s*\\d+))\\)\\s*(})\\s*)\\s*",
+            "match": "\\s*(\\w)\\s*:=\\s*(\\s*({)\\s*zindex\\s*:\\s*((\\+|-)(\\d|D))\\s*,\\s*rgba\\s*:\\s*(rgba?(\\(\\s*\\d+\\s*,\\s*\\d+\\s*,\\s*\\d+)(?:\\s*,.+?)?\\))\\s*(})\\s*)\\s*",
             "name": "dotnugg.general.color",
             "captures": {
                 "1": {
