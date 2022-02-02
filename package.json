@@ -1,6 +1,6 @@
 {
     "name": "@nuggxyz/dotnugg-grammar",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "description": "TextMate Grammar for dotnugg Language",
     "repository": "https://github.com/nuggxyz/dotnugg-grammar.git",
     "author": "dub6ix <dub6ix@nugg.xyz>",
@@ -19,6 +19,7 @@
         "build:clean": "rm -rf build && yarn build"
     },
     "dependencies": {
+        "fs": "^0.0.1-security",
         "plist": "^3.0.4"
     },
     "devDependencies": {
