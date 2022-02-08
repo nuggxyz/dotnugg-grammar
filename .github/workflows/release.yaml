@@ -28,7 +28,7 @@ jobs:
             - name: package-version
               run: node -p -e '`PACKAGE_VERSION=v${require("./package.json").version}`' >> $GITHUB_ENV
             - run: git reset --soft ${{ github.sha }}
-            - run: git commit --ammend --no-edit
+            - run: git commit --amend --no-edit
             - run: git push --force
             - run: yarn
             # - run: yarn build
