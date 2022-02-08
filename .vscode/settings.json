@@ -1,0 +1,9 @@
+{
+    "editor.detectIndentation": false,
+
+    "prettier.requireConfig": true,
+
+    "editor.formatOnSave": true,
+
+    "editor.bracketPairColorization.enabled": true
+}
