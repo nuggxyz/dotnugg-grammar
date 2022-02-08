@@ -25,7 +25,7 @@ jobs:
                     default: patch
                     target-branch: 'main'
                     commit-message: 'CI: bump to {{version}} [skip ci]'
-            - run: git rebase --interactive ${{ github.sha }}
+            - run: git rebase ${{ github.sha }}
             - run: yarn
             # - run: yarn build
             - run: yarn publish --access public
