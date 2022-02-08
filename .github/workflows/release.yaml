@@ -27,7 +27,7 @@ jobs:
                     commit-message: 'CI: bump to {{version}} [skip ci]'
             - name: package-version
               run: node -p -e '`PACKAGE_VERSION=v${require("./package.json").version}`' >> $GITHUB_ENV
-            - run: git pull && git checkout main && git reset --hard HEAD^
+            - run: git reset --hard ${{ github.sha }}
             - run: git push --force
             - run: yarn
             # - run: yarn build
