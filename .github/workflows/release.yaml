@@ -31,12 +31,14 @@ jobs:
             - run: yarn publish --access public
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTOMATION_KEY }}
-            # # create release
-            # - uses: "marvinpinto/action-automatic-releases@latest"
-            #   with:
-            #     repo_token: "${{ secrets.GITHUB_TOKEN }}"
-            #     prerelease: false
-            #     files: |
-            #         LICENSE
-            #         *.tmLanguage.json
+            # create release
+            - uses: "marvinpinto/action-automatic-releases@latest"
+              with:
+                repo_token: "${{ secrets.GITHUB_TOKEN }}"
+                prerelease: true
+                automatic_release_tag: "latest"
+                title: '{{version}}'
+                files: |
+                    LICENSE
+                    *.tmLanguage.json
 
