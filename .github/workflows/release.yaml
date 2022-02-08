@@ -21,7 +21,6 @@ jobs:
                with:
                     minor-wording:  'MINOR'
                     major-wording:  'MAJOR'
-                    rc-wording:  'RC'
                     tag-prefix:  'v'
                     default: patch
                     target-branch: 'main'
@@ -31,13 +30,15 @@ jobs:
             - run: yarn publish --access public
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTOMATION_KEY }}
+            - name: package-version
+              run: node -p -e '`PACKAGE_VERSION=v${require("./package.json").version}`' >> $GITHUB_ENV
             # create release
             - uses: "marvinpinto/action-automatic-releases@latest"
               with:
                 repo_token: "${{ secrets.GITHUB_TOKEN }}"
                 prerelease: true
                 automatic_release_tag: "latest"
-                title: '{{version}}'
+                title: ${{ env.PACKAGE_VERSION }}
                 files: |
                     LICENSE
                     *.tmLanguage.json
