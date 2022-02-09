@@ -2,7 +2,9 @@ name: Publish to npm
 on:
   push:
     tags:
-      - "v*"
+      - "*"
+
+
 jobs:
     release:
         runs-on: ubuntu-latest
@@ -15,6 +17,8 @@ jobs:
                   registry-url: "https://registry.npmjs.org"
                   # Defaults to the user or organization that owns the workflow file
                   scope: "@nuggxyz"
+            - run: npm --no-git-tag-version version from-git
+            - run: node -p -e '`PACKAGE_VERSION=v${require("./package.json").version}`' >> $GITHUB_ENV
             - run: yarn
             # - run: yarn build
             - run: yarn publish --access public
@@ -24,7 +28,16 @@ jobs:
             - uses: "marvinpinto/action-automatic-releases@latest"
               with:
                 repo_token: "${{ secrets.GITHUB_TOKEN }}"
-                prerelease: false
+                prerelease: true
+                automatic_release_tag: "latest"
+                title: ${{ env.PACKAGE_VERSION }}
                 files: |
-                    LICENSE.txt
+                    LICENSE
                     *.tmLanguage.json
+
+
+
+
+
+
+#${{ github.sha }}
