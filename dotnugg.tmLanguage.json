@@ -567,7 +567,7 @@
             ]
         },
         "general.color": {
-            "match": "\\s*(\\w)\\s*(graft|)\\s*(?::=|=|\\s)\\s*(\\s*({)\\s*(zindex|layer|lay)\\s*:\\s*((\\+|-)(\\d+|D))\\s*,\\s*(rgba|color|col)\\s*:\\s*((?:'|\\\")(.*)(?:'|\\\"))\\s*(})\\s*)\\s*",
+            "match": "\\s*(\\w)\\s*(graft|graft\\((\\w)\\))\\s*(?::=|=|\\s)\\s*(\\s*({)\\s*(zindex|layer|lay)\\s*:\\s*((\\+|-)(\\d+|D))\\s*,\\s*(rgba|color|col)\\s*:\\s*((?:'|\\\")(.*)(?:'|\\\"))\\s*(})\\s*)\\s*",
             "name": "dotnugg.general.color",
             "captures": {
                 "1": {
@@ -577,33 +577,36 @@
                     "name": "keyword.control dotnugg.general.color.graft"
                 },
                 "3": {
-                    "name": "dotnugg.general.color.details"
+                    "name": "constant dotnugg.general.color.graft.ref"
                 },
                 "4": {
-                    "name": "punctuation.bracket.open dotnugg.general.color.details.open"
+                    "name": "dotnugg.general.color.details"
                 },
                 "5": {
-                    "name": "entity.name.tag"
+                    "name": "punctuation.bracket.open dotnugg.general.color.details.open"
                 },
                 "6": {
-                    "name": "variable dotnugg.general.color.details.zindex"
-                },
-                "7": {
-                    "name": "dotnugg.general.color.details.zindex.direction"
-                },
-                "8": {
-                    "name": "dotnugg.general.color.details.zindex.offset"
-                },
-                "9": {
                     "name": "entity.name.tag"
                 },
+                "7": {
+                    "name": "variable dotnugg.general.color.details.zindex"
+                },
+                "8": {
+                    "name": "dotnugg.general.color.details.zindex.direction"
+                },
+                "9": {
+                    "name": "dotnugg.general.color.details.zindex.offset"
+                },
                 "10": {
-                    "name": "string"
+                    "name": "entity.name.tag"
                 },
                 "11": {
-                    "name": "dotnugg.general.color.details.rgba"
+                    "name": "string"
                 },
                 "12": {
+                    "name": "dotnugg.general.color.details.rgba"
+                },
+                "13": {
                     "name": "punctuation.bracket.close dotnugg.general.color.details.close"
                 }
             }
