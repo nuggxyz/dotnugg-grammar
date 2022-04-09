@@ -341,6 +341,9 @@
                     "include": "#collection.feature.long.zindex"
                 },
                 {
+                    "include": "#collection.feature.long.graft"
+                },
+                {
                     "include": "#collection.feature.long.receiver"
                 },
                 {
@@ -371,6 +374,18 @@
                 },
                 "4": {
                     "name": "dotnugg.collection.feature.long.zindex.offset"
+                }
+            }
+        },
+        "collection.feature.long.graft": {
+            "match": "\\s*(graftable|gft)\\s*(?::=|=|\\s)\\s*\\s*(true|false)\\s*",
+            "name": "collection.feature.long.graft",
+            "captures": {
+                "1": {
+                    "name": "constant collection.feature.long.graft.name"
+                },
+                "2": {
+                    "name": "variable boolean dotnugg.collection.feature.long.graft"
                 }
             }
         },
@@ -552,40 +567,43 @@
             ]
         },
         "general.color": {
-            "match": "\\s*(\\w)\\s*(?::=|=|\\s)\\s*(\\s*({)\\s*(zindex|layer|lay)\\s*:\\s*((\\+|-)(\\d+|D))\\s*,\\s*(rgba|color|col)\\s*:\\s*((?:'|\\\")(.*)(?:'|\\\"))\\s*(})\\s*)\\s*",
+            "match": "\\s*(\\w)\\s*(graft|)\\s*(?::=|=|\\s)\\s*(\\s*({)\\s*(zindex|layer|lay)\\s*:\\s*((\\+|-)(\\d+|D))\\s*,\\s*(rgba|color|col)\\s*:\\s*((?:'|\\\")(.*)(?:'|\\\"))\\s*(})\\s*)\\s*",
             "name": "dotnugg.general.color",
             "captures": {
                 "1": {
                     "name": "constant dotnugg.general.color.name"
                 },
                 "2": {
-                    "name": "dotnugg.general.color.details"
+                    "name": "keyword.control dotnugg.general.color.graft"
                 },
                 "3": {
-                    "name": "punctuation.bracket.open dotnugg.general.color.details.open"
+                    "name": "dotnugg.general.color.details"
                 },
                 "4": {
-                    "name": "entity.name.tag"
+                    "name": "punctuation.bracket.open dotnugg.general.color.details.open"
                 },
                 "5": {
-                    "name": "variable dotnugg.general.color.details.zindex"
-                },
-                "6": {
-                    "name": "dotnugg.general.color.details.zindex.direction"
-                },
-                "7": {
-                    "name": "dotnugg.general.color.details.zindex.offset"
-                },
-                "8": {
                     "name": "entity.name.tag"
                 },
+                "6": {
+                    "name": "variable dotnugg.general.color.details.zindex"
+                },
+                "7": {
+                    "name": "dotnugg.general.color.details.zindex.direction"
+                },
+                "8": {
+                    "name": "dotnugg.general.color.details.zindex.offset"
+                },
                 "9": {
-                    "name": "string"
+                    "name": "entity.name.tag"
                 },
                 "10": {
-                    "name": "dotnugg.general.color.details.rgba"
+                    "name": "string"
                 },
                 "11": {
+                    "name": "dotnugg.general.color.details.rgba"
+                },
+                "12": {
                     "name": "punctuation.bracket.close dotnugg.general.color.details.close"
                 }
             }

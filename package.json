@@ -1,6 +1,6 @@
 {
     "name": "@nuggxyz/dotnugg-grammar",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "TextMate Grammar for dotnugg Language",
     "repository": "https://github.com/nuggxyz/dotnugg-grammar.git",
     "author": "dub6ix <dub6ix@nugg.xyz>",
