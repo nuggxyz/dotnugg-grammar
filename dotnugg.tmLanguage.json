@@ -567,7 +567,7 @@
             ]
         },
         "general.color": {
-            "match": "\\s*(\\w)\\s*(|graft|graft\\((\\w)\\))\\s*(?::=|=|\\s)\\s*(\\s*({)\\s*(zindex|layer|lay)\\s*:\\s*((\\+|-)(\\d+|D))\\s*,\\s*(rgba|color|col)\\s*:\\s*((?:'|\\\")(.*)(?:'|\\\"))\\s*(})\\s*)\\s*",
+            "match": "\\s*(\\S)\\s*(|graft|graft\\((\\w)\\))\\s*(?::=|=|\\s)\\s*(\\s*({)\\s*(zindex|layer|lay)\\s*:\\s*((\\+|-)(\\d+|D))\\s*,\\s*(rgba|color|col)\\s*:\\s*((?:'|\\\")(.*)(?:'|\\\"))\\s*(})\\s*)\\s*",
             "name": "dotnugg.general.color",
             "captures": {
                 "1": {
