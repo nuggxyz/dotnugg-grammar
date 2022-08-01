@@ -650,7 +650,7 @@
             ]
         },
         "general.data.row.pixel": {
-            "match": "(\\S)",
+            "match": "(\\.)(\\S)",
             "name": "dotnugg.general.pixel",
             "captures": {
                 "0": {
@@ -660,7 +660,7 @@
                     "name": "comment dotnugg.general.data.row.pixel.transparent"
                 },
                 "2": {
-                    "name": "dotnugg.general.data.row.pixel.filter"
+                    "name": "variable dotnugg.general.data.row.pixel.color"
                 },
                 "3": {
                     "name": "variable dotnugg.general.data.row.pixel.color"
