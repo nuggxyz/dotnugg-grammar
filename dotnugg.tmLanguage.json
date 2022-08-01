@@ -650,7 +650,7 @@
             ]
         },
         "general.data.row.pixel": {
-            "match": "(\\.)(\\S)",
+            "match": "(\\.)|(\\S)",
             "name": "dotnugg.general.pixel",
             "captures": {
                 "0": {
